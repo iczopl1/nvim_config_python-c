@@ -4,7 +4,7 @@ require("nvchad.configs.lspconfig").defaults()
 local lspconfig = require "lspconfig"
 
 -- EXAMPLE
-local servers = { "html", "cssls", "pyright","clangd"}
+local servers = { "html", "cssls", "pyright","clangd","texlab"}
 local nvlsp = require "nvchad.configs.lspconfig"
 
 -- lsps with default config
@@ -25,6 +25,12 @@ lspconfig.clangd.setup({
   on_attach = nvlsp.on_attach,
   capabilities = nvlsp.capabilities,
   filetypes = {"c","c++","c#"}
+
+})
+lspconfig.texlab.setup({
+  on_attach = nvlsp.on_attach,
+  capabilities = nvlsp.capabilities,
+  filetypes = {"latex","tex","latexmk"}
 
 })
 -- configuring single server, example: typescript
