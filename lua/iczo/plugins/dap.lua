@@ -47,6 +47,6 @@ return{
       "nvim-neotest/nvim-nio"
     },
     config = function()
-      require("iczo.configs.mappings").setup()
+      require("iczo.configs.dap_conf").setup()
     end
   },}
