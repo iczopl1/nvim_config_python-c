@@ -5,6 +5,7 @@ local opts ={
     none_ls.builtins.diagnostics.mypy,
     none_ls.builtins.formatting.black,
     none_ls.builtins.formatting.clang_format,
+    none_ls.builtins.formatting.google_java_format,
   },
   on_attach =function (client, bufnr)
     if client.supports_method("textDocument/formatting") then
